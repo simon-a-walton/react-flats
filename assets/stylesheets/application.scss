@@ -1,10 +1,83 @@
+@import "cards";
+
+.bg {
+  background-image: url('https://images.unsplash.com/photo-1511191231550-91ae517ca3fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 body {
-  font-family: Helvetica;
+  background-color: white;
+  font-family: 'Syne', sans-serif;
+
+  h1 {
+  color: white;
+
+  background-color: #C691F7;
+  border-radius: 4px;
+  padding: 8px;
+  }
+}
+
+footer {
+  padding: 16px;
+  font-size: 28px;
 }
 
 #root {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
+
+#root > div {
+  margin-top: 20px;
+  display: flex;
+}
+
+.left-scene {
+  margin-right: 4px;
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+
+   .flat-list {
+    column-count: 2;
+    column-gap: 4px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .card {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.right-scene {
+  margin-left: 4px;
+  flex: 0 0 50%;
+  background-color: #ecf0f1;
+  overflow: scroll;
+
+   .map-container {
+    height: 100%;
+    position: sticky !important; /* !important to override Gmaps inline CSS */
+    top: 0 !important;
+    background-color: #50DDC4;
+    padding: 4px;
+    border-radius: 4px;
+  }
+}
+
+.marker {
+  background-image: url('https://img.freepik.com/free-vector/vintage-sport-skateboard-concept_225004-1189.jpg?size=40&ext=jpg');
+  height: 40px;
+  width: 40px;
+  border-radius: 30%;
+  padding: 16px;
+}
+
+
+
+
